@@ -1,0 +1,33 @@
+{
+  "name": "@moonncat/base64tofile",
+  "version": "0.0.1",
+  "main": "file.js",
+  "description": "get file from base64 string",
+  "scripts": {
+    "test": "echo 'test is not ready'"
+  },
+  "files": [
+    "file.ts",
+    "file.js",
+    "file.d.ts",
+    "tsconfig.json"
+  ],
+  "keywords": [
+    "base64",
+    "file",
+    "upload file",
+    "download file"
+  ],
+  "author": "Dino <roragnarok@qq.com>",
+  "homepage": "https://github.com/moonncat/base64tofile",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moonncat/base64tofile"
+  },
+  "license": "ISC"
+}
