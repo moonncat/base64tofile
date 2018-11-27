@@ -1,1 +1,1 @@
-export { File } from './cookie';
+export { File } from './file';

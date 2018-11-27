@@ -1,6 +1,6 @@
 {
   "name": "@moonncat/base64tofile",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "file.js",
   "description": "get file from base64 string",
   "scripts": {

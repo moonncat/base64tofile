@@ -1,6 +1,6 @@
 # base64tofile
 
-> get file from base64 string
+> get file from base64 string, or upload file to specific service
 
 
 ## Install

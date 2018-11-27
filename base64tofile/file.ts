@@ -19,6 +19,8 @@
 
         if (option && option.fileName) {
             a.download = option.fileName;
+        }else{
+            a.download=new Date().toString();
         }
 
         a.click();

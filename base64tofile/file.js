@@ -5,6 +5,7 @@ var File = /** @class */ (function () {
         this.document = document;
     }
     File.prototype.download = function (base64String, option) {
+        if (option === void 0) { option = {}; }
         var bstr = atob(base64String);
         var n = bstr.length;
         var u8arr = new Uint8Array(n);
@@ -17,6 +18,9 @@ var File = /** @class */ (function () {
         if (option && option.fileName) {
             a.download = option.fileName;
         }
+        else {
+            a.download = new Date().toString();
+        }
         a.click();
         URL.revokeObjectURL(a.href);
         if (option && option.callback) {
@@ -24,6 +28,7 @@ var File = /** @class */ (function () {
         }
     };
     File.prototype.upload = function (url, fileInputID, option) {
+        if (option === void 0) { option = {}; }
         var fileContainer = this.document.getElementById(fileInputID);
         var fd = new FormData();
         fd.append('fileName', fileContainer.value.split("\\").pop());
