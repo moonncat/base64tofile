@@ -39,6 +39,11 @@
 
         var xhr = new XMLHttpRequest();
         xhr.open('post', url, true);
+        if(option.headers){
+            for(var h in option.headers){
+                xhr.setRequestHeader(h,option.headers[h]);
+            }
+        }
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
