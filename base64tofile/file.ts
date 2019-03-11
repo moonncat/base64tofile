@@ -33,9 +33,10 @@
     upload(url: string, fileInputID: string, option: any={}): void {
         var fileContainer = this.document.getElementById(fileInputID) as any;
         var fd = new FormData();
-
-        fd.append('fileName', fileContainer.value.split("\\").pop());
-        fd.append('file', fileContainer.files[0]);
+        for (var file in fileContainer.files) {
+            var f = file as any;
+            fd.append(f.name, f);
+        }
 
         var xhr = new XMLHttpRequest();
         xhr.open('post', url, true);

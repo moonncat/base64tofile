@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var File = /** @class */ (function () {
     function File(document) {
         this.document = document;
@@ -31,8 +31,10 @@ var File = /** @class */ (function () {
         if (option === void 0) { option = {}; }
         var fileContainer = this.document.getElementById(fileInputID);
         var fd = new FormData();
-        fd.append('fileName', fileContainer.value.split("\\").pop());
-        fd.append('file', fileContainer.files[0]);
+        for (var file in fileContainer.files) {
+            var f = file;
+            fd.append(f.name, f);
+        }
         var xhr = new XMLHttpRequest();
         xhr.open('post', url, true);
         if (option.headers) {
