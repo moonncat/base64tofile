@@ -31,8 +31,8 @@ var File = /** @class */ (function () {
         if (option === void 0) { option = {}; }
         var fileContainer = this.document.getElementById(fileInputID);
         var fd = new FormData();
-        for (var file in fileContainer.files) {
-            var f = file;
+        for (var i = 0; i < fileContainer.files.length; i++) {
+            var f = fileContainer.files[i];
             fd.append(f.name, f);
         }
         var xhr = new XMLHttpRequest();

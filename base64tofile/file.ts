@@ -33,8 +33,8 @@
     upload(url: string, fileInputID: string, option: any={}): void {
         var fileContainer = this.document.getElementById(fileInputID) as any;
         var fd = new FormData();
-        for (var file in fileContainer.files) {
-            var f = file as any;
+        for (var i=0;i<fileContainer.files.length;i++) {
+            var f = fileContainer.files[i] as any;
             fd.append(f.name, f);
         }
 

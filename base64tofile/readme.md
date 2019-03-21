@@ -1,6 +1,6 @@
 # base64tofile
 
-> get file from base64 string, or upload file to specific service
+> get file from base64 string, or upload multiple files to specific service
 
 
 ## Install
@@ -20,8 +20,8 @@ file.download('dGVzdA==');
 
 //<input id="inputID" type="file"/>
 file.upload('./upload/','inputID');
-file.upload('./upload/','inputID',{'fileName':'text1.txt'});
-file.upload('./upload/','inputID',{'fileName':'text1.txt',success:function(){},fail:function(){}});
+file.upload('./upload/','inputID',{'headers':{'Authorization':'Bearer token'}});
+file.upload('./upload/','inputID',{'headers':{'Authorization':'Bearer token'},success:function(){},fail:function(){}});
 
 
 ```
@@ -31,8 +31,8 @@ file.upload('./upload/','inputID',{'fileName':'text1.txt',success:function(){},f
 File.download('dGVzdA==');
 //<input id="inputID" type="file"/>
 File.upload('./upload/','inputID');
-File.upload('./upload/','inputID',{'fileName':'text1.txt'});
-File.upload('./upload/','inputID',{'fileName':'text1.txt',success:function(){},fail:function(){}});
+File.upload('./upload/','inputID',{'headers':{'Authorization':'Bearer token'}});
+File.upload('./upload/','inputID',{'headers':{'Authorization':'Bearer token'},success:function(){},fail:function(){}});
 ```
 **
 
